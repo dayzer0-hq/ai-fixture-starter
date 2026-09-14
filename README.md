@@ -52,3 +52,7 @@ Your brief names the specific data it gives you (e.g. `data/tickets.jsonl`, a la
 corpus). That per-brief data is provided WITH your project and lands in `data/`. The
 `data/fixture.jsonl` here is the shared demonstrator: it shows the shape and the four failure
 kinds every brief's fixture carries.
+
+## Cost, tokens and repeats
+
+Each well-formed case carries `cost_paise`, `latency_ms`, `prompt_tokens` and `completion_tokens`, and one case is an exact repeat — so the cost, token-trim, cache and latency briefs measure a real per-call cost and a real cache hit against the fixture, no live call needed.

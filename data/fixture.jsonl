@@ -1,6 +1,7 @@
-{"id": "ok_1", "kind": "well_formed", "response": {"answer": "A", "confidence": 0.9}}
-{"id": "ok_2", "kind": "well_formed", "response": {"answer": "B", "confidence": 0.7}}
+{"id": "ok_1", "kind": "well_formed", "response": {"answer": "A", "confidence": 0.9}, "cost_paise": 2, "latency_ms": 300, "prompt_tokens": 120, "completion_tokens": 18}
+{"id": "ok_2", "kind": "well_formed", "response": {"answer": "B", "confidence": 0.7}, "cost_paise": 2, "latency_ms": 300, "prompt_tokens": 120, "completion_tokens": 18}
 {"id": "broken_malformed_json", "kind": "malformed_json", "raw": "{\"answer\": \"A\", \"confidence\": 0.9,,,", "note": "not valid JSON \u2014 your parser must reject this, not crash"}
 {"id": "broken_refusal", "kind": "refusal", "raw": "I'm sorry, I can't help with that request.", "note": "a plain-text refusal, not the JSON your contract asked for"}
 {"id": "broken_off_contract", "kind": "off_contract", "response": {"answer": "A", "confidence": 0.9, "unexpected_field": "surprise", "category": "not_in_your_enum"}, "note": "valid JSON but off-contract: an extra field and a value outside the allowed set"}
 {"id": "broken_timeout", "kind": "timeout", "error": "timeout", "note": "the call did not return in time \u2014 your code must fall back, not hang"}
+{"id": "repeat_of_ok_1", "kind": "well_formed", "response": {"answer": "A", "confidence": 0.9}, "cost_paise": 2, "latency_ms": 300, "prompt_tokens": 120, "completion_tokens": 18, "note": "an exact repeat of ok_1's question \u2014 a cache should serve this without paying again"}
