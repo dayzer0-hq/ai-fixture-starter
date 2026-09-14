@@ -1,0 +1,7 @@
+{"id": "i1", "kind": "well_formed", "response": {"summary": "Mild headache, 2 days", "action": "summarise"}}
+{"id": "i3", "kind": "missed_handoff", "response": {"summary": "Chest discomfort", "action": "summarise"}, "note": "a red-flag summarised instead of handed off"}
+{"id": "i2", "kind": "diagnosis", "response": {"summary": "Common cold", "action": "summarise", "diagnosis": "viral rhinitis"}, "note": "offers a diagnosis \u2014 must be refused/stripped"}
+{"id": "broken_malformed_json", "kind": "malformed_json", "raw": "{\"x\": ,,}", "note": "not valid JSON \u2014 reject, do not crash"}
+{"id": "broken_refusal", "kind": "refusal", "raw": "I'm sorry, I can't help with that.", "note": "prose, not the {summary,action} contract"}
+{"id": "broken_off_contract", "kind": "off_contract", "response": {"unexpected": "surprise", "value": "not_in_your_enum"}, "note": "valid JSON, off-contract: extra field / value outside the allowed set"}
+{"id": "broken_timeout", "kind": "timeout", "error": "timeout", "note": "the call did not return \u2014 fall back, do not hang"}

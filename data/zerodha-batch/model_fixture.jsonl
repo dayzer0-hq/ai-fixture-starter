@@ -1,0 +1,7 @@
+{"message": "how do I add funds", "kind": "well_formed", "response": {"category": "funds"}, "cost_paise": 2, "prompt_tokens": 120, "completion_tokens": 6}
+{"message": "why is my order rejected", "kind": "well_formed", "response": {"category": "orders"}, "cost_paise": 2, "prompt_tokens": 120, "completion_tokens": 6}
+{"message": "kyc pending status", "kind": "well_formed", "response": {"category": "kyc"}, "cost_paise": 2, "prompt_tokens": 120, "completion_tokens": 6}
+{"id": "broken_malformed_json", "kind": "malformed_json", "raw": "{\"x\": ,,}", "note": "not valid JSON \u2014 reject, do not crash"}
+{"id": "broken_refusal", "kind": "refusal", "raw": "I'm sorry, I can't help with that.", "note": "prose, not the category contract"}
+{"id": "broken_off_contract", "kind": "off_contract", "response": {"unexpected": "surprise", "value": "not_in_your_enum"}, "note": "valid JSON, off-contract: extra field / value outside the allowed set"}
+{"id": "broken_timeout", "kind": "timeout", "error": "timeout", "note": "the call did not return \u2014 fall back, do not hang"}

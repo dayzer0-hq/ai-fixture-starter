@@ -1,0 +1,11 @@
+{"question": "how do I add money", "kind": "well_formed", "response": {"answer": "Answer to: how do I add money"}, "cost_paise": 2}
+{"question": "why is my order pending", "kind": "well_formed", "response": {"answer": "Answer to: why is my order pending"}, "cost_paise": 2}
+{"question": "how do I add a nominee", "kind": "well_formed", "response": {"answer": "Answer to: how do I add a nominee"}, "cost_paise": 2}
+{"question": "is my money safe", "kind": "well_formed", "response": {"answer": "Answer to: is my money safe"}, "cost_paise": 2}
+{"question": "what is an SIP", "kind": "well_formed", "response": {"answer": "Answer to: what is an SIP"}, "cost_paise": 2}
+{"question": "how do I add money to my wallet", "kind": "well_formed", "response": {"answer": "Answer to: how do I add money to my wallet"}, "cost_paise": 2}
+{"question": "how do I remove money", "kind": "well_formed", "response": {"answer": "Answer to: how do I remove money"}, "cost_paise": 2}
+{"id": "broken_malformed_json", "kind": "malformed_json", "raw": "{\"x\": ,,}", "note": "not valid JSON \u2014 reject, do not crash"}
+{"id": "broken_refusal", "kind": "refusal", "raw": "I'm sorry, I can't help with that.", "note": "prose, not the answer contract"}
+{"id": "broken_off_contract", "kind": "off_contract", "response": {"unexpected": "surprise", "value": "not_in_your_enum"}, "note": "valid JSON, off-contract: extra field / value outside the allowed set"}
+{"id": "broken_timeout", "kind": "timeout", "error": "timeout", "note": "the call did not return \u2014 fall back, do not hang"}

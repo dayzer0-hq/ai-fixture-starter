@@ -56,3 +56,7 @@ kinds every brief's fixture carries.
 ## Cost, tokens and repeats
 
 Each well-formed case carries `cost_paise`, `latency_ms`, `prompt_tokens` and `completion_tokens`, and one case is an exact repeat — so the cost, token-trim, cache and latency briefs measure a real per-call cost and a real cache hit against the fixture, no live call needed.
+
+## Namespaced by brief (DZ-712)
+
+Each brief's files live under `data/<brief>/` (e.g. `data/meesho/`), so every brief gets its own inputs, recorded responses and labels — nothing is shared or softened. Load yours with `fixture.load("<brief>", "<file>")`. Every model_fixture carries the four broken kinds; the fixtures are **representative samples**, not production scale — a fixture is not the model.

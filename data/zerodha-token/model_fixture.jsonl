@@ -1,0 +1,10 @@
+{"id": "z1", "prompt_version": "original", "kind": "well_formed", "response": {"category": "funds"}, "prompt_tokens": 240, "completion_tokens": 6, "cost_paise": 3}
+{"id": "z1", "prompt_version": "trimmed", "kind": "well_formed", "response": {"category": "funds"}, "prompt_tokens": 90, "completion_tokens": 6, "cost_paise": 1}
+{"id": "z2", "prompt_version": "original", "kind": "well_formed", "response": {"category": "orders"}, "prompt_tokens": 240, "completion_tokens": 6, "cost_paise": 3}
+{"id": "z2", "prompt_version": "trimmed", "kind": "well_formed", "response": {"category": "orders"}, "prompt_tokens": 90, "completion_tokens": 6, "cost_paise": 1}
+{"id": "z3", "prompt_version": "original", "kind": "well_formed", "response": {"category": "kyc"}, "prompt_tokens": 240, "completion_tokens": 6, "cost_paise": 3}
+{"id": "z3", "prompt_version": "trimmed", "kind": "well_formed", "response": {"category": "kyc"}, "prompt_tokens": 90, "completion_tokens": 6, "cost_paise": 1}
+{"id": "broken_malformed_json", "kind": "malformed_json", "raw": "{\"x\": ,,}", "note": "not valid JSON \u2014 reject, do not crash"}
+{"id": "broken_refusal", "kind": "refusal", "raw": "I'm sorry, I can't help with that.", "note": "prose, not the category contract"}
+{"id": "broken_off_contract", "kind": "off_contract", "response": {"unexpected": "surprise", "value": "not_in_your_enum"}, "note": "valid JSON, off-contract: extra field / value outside the allowed set"}
+{"id": "broken_timeout", "kind": "timeout", "error": "timeout", "note": "the call did not return \u2014 fall back, do not hang"}

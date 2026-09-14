@@ -1,0 +1,5 @@
+{"id": "i1", "action": "summarise"}
+{"id": "i3", "action": "handoff", "reason": "red_flag_chest_pain"}
+{"id": "i5", "action": "handoff", "reason": "red_flag_stroke"}
+{"id": "i7", "action": "handoff", "reason": "out_of_scope"}
+{"id": "i9", "action": "handoff", "reason": "red_flag_high_fever_confusion"}

@@ -1,0 +1,6 @@
+{"product": "p1", "kind": "well_formed", "response": {"summary": "Long-lasting with a good shade range; can be drying."}}
+{"product": "p2", "kind": "hallucinated_claim", "response": {"summary": "Pleasant scent, suits oily skin, and is SPF 30."}, "note": "SPF 30 is not in the reviews"}
+{"id": "broken_malformed_json", "kind": "malformed_json", "raw": "{\"x\": ,,}", "note": "not valid JSON \u2014 reject, do not crash"}
+{"id": "broken_refusal", "kind": "refusal", "raw": "I'm sorry, I can't help with that.", "note": "prose, not the summary contract"}
+{"id": "broken_off_contract", "kind": "off_contract", "response": {"unexpected": "surprise", "value": "not_in_your_enum"}, "note": "valid JSON, off-contract: extra field / value outside the allowed set"}
+{"id": "broken_timeout", "kind": "timeout", "error": "timeout", "note": "the call did not return \u2014 fall back, do not hang"}

@@ -1,0 +1,7 @@
+{"id": "m1", "kind": "well_formed", "response": {"restaurant": "Empire Restaurant", "item": null, "when": "last night", "issue": "not_delivered"}}
+{"id": "m2", "kind": "well_formed", "response": {"restaurant": "Meghana", "item": "biryani", "when": null, "issue": "quality"}}
+{"id": "broken_hallucinated_field", "kind": "off_contract", "response": {"restaurant": "Empire Restaurant", "item": "biryani", "when": "last night", "issue": "not_delivered"}, "note": "item invented \u2014 message m1 named no item"}
+{"id": "broken_malformed_json", "kind": "malformed_json", "raw": "{\"x\": ,,}", "note": "not valid JSON \u2014 reject, do not crash"}
+{"id": "broken_refusal", "kind": "refusal", "raw": "I'm sorry, I can't help with that.", "note": "prose, not the {restaurant,item,when,issue} contract"}
+{"id": "broken_off_contract", "kind": "off_contract", "response": {"unexpected": "surprise", "value": "not_in_your_enum"}, "note": "valid JSON, off-contract: extra field / value outside the allowed set"}
+{"id": "broken_timeout", "kind": "timeout", "error": "timeout", "note": "the call did not return \u2014 fall back, do not hang"}
